@@ -11,6 +11,7 @@ class _MinePageState extends State<MinePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         title: Text('我的'  , style: TextStyle( color: Color(AppColors.APP_BAR) ), ),
       ),
     );

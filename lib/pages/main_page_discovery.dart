@@ -11,6 +11,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         title: Text('发现'  , style: TextStyle( color: Color(AppColors.APP_BAR) ),),
       ),
     );

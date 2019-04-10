@@ -11,6 +11,7 @@ class _TweetPageState extends State<TweetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         title: Text('动弹' , style: TextStyle( color: Color(AppColors.APP_BAR) ),),
       ),
     );
