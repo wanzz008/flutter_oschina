@@ -12,6 +12,7 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('关于'  , style: TextStyle( color: Color(AppColors.APP_BAR) ),),
+
       ),
     );
   }

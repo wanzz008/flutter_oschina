@@ -61,6 +61,8 @@ class MyDrawer extends StatelessWidget {
 
   void _goPage(index, context ){
 
+    Navigator.pop(context); //先把drawer收起
+
     switch( index ){
       case 0:
         Navigator.push(context, MaterialPageRoute(builder: (context)=>PublishTweetPage()));

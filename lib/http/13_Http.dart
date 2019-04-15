@@ -67,7 +67,7 @@ class HomeState extends State<HomePage> {
               print("data == null---------------");
             }
 
-            var convertDataToJson = json.decode( responseBody );
+            var convertDataToJson = json.decode( responseBody );// 将json解析成map
             convertDataToJson = convertDataToJson["data"]["datas"];
 
             print(convertDataToJson);

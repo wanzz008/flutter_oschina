@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 class HttpController {
   static void get(String url, Function callback,
       {Map<String, String> params, Function errorCallback}) async {
+        print('HttpController get: $url');
         if (params != null && params.isNotEmpty) {
           StringBuffer sb = new StringBuffer("?");
           params.forEach((key, value) {
@@ -27,8 +28,10 @@ class HttpController {
   }
  
   static void post(String url, Function callback,
-      {Map<String, String> params, Function errorCallback}) async {
+      {Map<String, dynamic> params, Function errorCallback}) async {
     try {
+
+      print('HttpController post: $url');
 
       http.Response res = await http.post(url, body: params);
 
@@ -37,7 +40,9 @@ class HttpController {
     
       }
     } catch (e) {
-     
+
+      print('postException: $e');
+
       if (errorCallback != null) {
         errorCallback(e);
       }

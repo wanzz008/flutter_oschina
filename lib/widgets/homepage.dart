@@ -53,12 +53,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       // AppBar
       appBar: AppBar(
-        elevation: 0.0,
+        elevation: 1.0,
         title: Text(
           _appBarTitle[ _currentIndex ] ,
           style: TextStyle( color: Color(AppColors.APP_BAR) ),
         ),
-        iconTheme: IconThemeData(color: Color(AppColors.APP_BAR) ),
+        iconTheme: IconThemeData(color: Color(AppColors.APP_BAR) ), // 让AppBar的返回按钮，变成白色
       ),
 
       // 底部导航栏
