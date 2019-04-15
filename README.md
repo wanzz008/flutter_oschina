@@ -1,6 +1,6 @@
 # flutter_oschina
 
-A new Flutter application.
+用Flutter实现开源中国项目.
 
 ## Getting Started
 
