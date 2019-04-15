@@ -15,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
 
-// 开源中国api文档：https://www.oschina.net/openapi/docs/news_list
+- [开源中国api文档] https://www.oschina.net/openapi/docs/news_list
 
 ## Day 1：
 - bottomNavigationBar是底部导航栏  BottomNavigationBarItem是子条目
