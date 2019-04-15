@@ -16,6 +16,9 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 - [开源中国api文档](https://www.oschina.net/openapi/docs/news_list)
+- [【Flutter】Flutter 一些常用库1](https://www.cnblogs.com/yangyxd/p/9232308.html)
+- [【Flutter】Flutter 一些常用库2](https://github.com/AweiLoveAndroid/Flutter-learning/blob/master/readme/Flutter%E7%9A%84%E9%9C%80%E8%A6%81%E4%B8%8E%E5%8E%9F%E7%94%9F%E4%BA%A4%E4%BA%92%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%BA%93.md)
+
 
 
 ## Day 1：
