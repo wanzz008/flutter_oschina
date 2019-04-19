@@ -28,5 +28,7 @@ class AppUrls{
 
   // 消息列表
   static const MESSAGE_LIST = HTTP_HOST + '/action/openapi/message_list?';
+  // 新闻列表
+  static const NEWS_LIST = HTTP_HOST + '/action/openapi/news_list?';
 
 }

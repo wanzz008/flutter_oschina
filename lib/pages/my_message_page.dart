@@ -39,7 +39,9 @@ class _MyMessagePageState extends State<MyMessagePage> {
               color: Color(AppColors.APP_BAR),
             ),
 
-            bottom: TabBar(tabs: _tabTitles.map((title)=>Tab(text: title,)).toList()),
+            bottom: TabBar(
+                tabs: _tabTitles.map((title)=>Tab(text: title,)).toList()
+            ),
           ),
         body: TabBarView(children: [
           Center(

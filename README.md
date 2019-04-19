@@ -21,6 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
+
 ## Day 1：
 - bottomNavigationBar是底部导航栏  BottomNavigationBarItem是子条目
     -- type: BottomNavigationBarType.fixed, // 需要加此配置 不然BottomNavigationBarItem的字体颜色为白色
@@ -45,4 +46,4 @@ samples, guidance on mobile development, and a full API reference.
 ## Day 3：
 - FadeInImage.assetNetwork() 可以加载网络图片，并可以设置占位图片
 - AppBar下的bottom属性TabBar
-- 配合Scaffold下body属性TabBarView，可以有viewpager左右滑动的效果
+- 配合Scaffold下body属性TabBarView，可以有viewpager左右滑动的效果,但二者得有controller关联

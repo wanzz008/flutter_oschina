@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -37,6 +38,12 @@ class _MinePageState extends State<MinePage> {
   String avatarUrl ; // 头像地址
   String userName ; // 用户名称
 
+  StreamSubscription subscription ;
+  @override
+  void dispose() {
+    super.dispose();
+    subscription.pause();  //  暂停
+  }
   @override
   void initState() {
     super.initState();
@@ -45,15 +52,20 @@ class _MinePageState extends State<MinePage> {
     _showUerInfo();
 
     //  登录成功后，调用eventBus.fire(LoginEvent()) 后会走下面的回调
-    eventBus.on<LoginEvent>().listen((event) {
 
-      print('eventBus------: LoginEvent.....');
+    subscription = eventBus.on<LoginEvent>().listen((event) {
+
+      print('eventBus------[page_mine]: LoginEvent.....');
       _getUerInfo();
     });
 
+    subscription.resume();  //  开
+//    subscription.pause();    //  暂停
+//    subscription.cancel();   //  取消
+
     // 设置里面，点击退出登录，会走这里
     eventBus.on<LogoutEvent>().listen((event) {
-      print('eventBus------: LogoutEvent.....');
+      print('eventBus------[page_mine]: LogoutEvent.....');
       _showUerInfo();
     });
 
@@ -123,15 +135,6 @@ class _MinePageState extends State<MinePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center, // 居中
         children: <Widget>[
-//          CircleAvatar(
-//            backgroundImage:NetworkImage( 'https://oscimg.oschina.net/oscnet/up-37af489df9a42b0571012b0dcfd489fe.jpg!/both/200x200'),
-//
-//            radius: 50.0,
-//          ),
-
-//          Image.network( avatarUrl ??= 'https://oscimg.oschina.net/oscnet/up-37af489df9a42b0571012b0dcfd489fe.jpg!/both/200x200',
-//
-//            width: 100, height: 100,) ,
 
           // GestureDetector并不具有显示效果，而是检测由用户做出的手势(点击拖动和缩放)
           GestureDetector(
@@ -246,6 +249,7 @@ class _MinePageState extends State<MinePage> {
           var map = json.decode( data );
           print('User avatar------: ${map['avatar']}');
           setState(() {
+            if( !mounted) return ;
             avatarUrl = map['avatar']; // 头像地址
             userName = map['name']; // 名称
           });
